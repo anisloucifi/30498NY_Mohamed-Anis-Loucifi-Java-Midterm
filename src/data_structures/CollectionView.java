@@ -1,5 +1,6 @@
 package data_structures;
 
+import java.sql.SQLOutput;
 import java.util.HashMap;
 
 public class CollectionView {
@@ -20,6 +21,9 @@ public class CollectionView {
         map.put(4, "Boston");
         map.put(1, "NYC");
         map.put(3, "Denver");
+
+        System.out.println(map.values());
+
 
     }
 

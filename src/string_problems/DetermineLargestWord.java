@@ -6,7 +6,7 @@ import java.util.Map;
 public class DetermineLargestWord {
 
     /** INSTRUCTIONS
-     * Implement a solution to find the length of the longest word in the given sentence below
+     * Implement a solution to find the length of the longest word in the given sentence belwo
      * Your solution should return a map containing the length of the word as the key & the word itself as the value
      * "10: biological"
      */
@@ -22,8 +22,20 @@ public class DetermineLargestWord {
         Map<Integer, String> map = new HashMap<Integer, String>();
         String st = "";
 
-        // Implement here
+            String[] words =wordGiven.split(" ");
+            int length = 0;
 
+            for(String word:words){
+                if(length < word.length()){
+                    length = word.length();
+                }
+            }
+
+
+
+
+        // Implement here
+         System.out.println(map);
         return map;
     }
 }

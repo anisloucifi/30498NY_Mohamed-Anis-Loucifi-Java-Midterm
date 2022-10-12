@@ -2,48 +2,69 @@
 
 Why do we need data structure?
 Answer:
-
+is a way to store and organize data so that it can be used efficiently
 What are the various operations that can be performed on different data structures?
 Answer:
-
+in data structures we can add and remove element
 When would we use data structures in the real world?
 Answer:
-
+we can use data structures in Compiler Design,
+                              Operating System,
+                              Database Management System,
+                              Statistical analysis package,
+                              Numerical Analysis,
+                              Graphics,
+                              Artificial Intelligence,
+                              Simulation
 What is an Array?
 Answer:
-
+Arrays are defined as the collection of similar types of data items stored at contiguous memory locations.
+ It is the simplest data structure in which each data element can be randomly accessed by using its index number.
 What is the difference between Array and ArrayList?
 Answer:
 
 What is a LinkedList?
 Answer:
-
+Linked List is the collection of randomly stored data objects called nodes. In Linked List,
+ each node is linked to its adjacent node through a pointer.
 How is an Array different from LinkedList?
 Answer:
 
 What is a Queue?
 Answer:
+A queue can be defined as an ordered list which enables insert operations to be performed at one end called
+ REAR and delete operations to be performed at another end called FRONT.
 
 What is a Stack (referring to data structures)?
 Answer:
+Stack is an ordered list in which, insertion and deletion can be performed only at one end that is called the top.
+ It is a recursive data structure having pointer to its top element. The stack is sometimes called as
+ Last-In-First-Out (LIFO) list i.e. the element which is inserted first in the stack will be deleted last from the stack.
 
 What is FIFO and LIFO?
 Answer:
-
+fifo first in first out a queue principe means the first element added to a data structure is the fist accessible element
+lifo last in fist out a stack principe means the last element added is the first accessible element
 Explain Big O Notation?
 Answer:
 
 What is the best case to search an element from an array?
 Answer:
+It can be done by using an indexed loop such that the counter runs from 0 to the array size minus one.
 
 What is the worst case to search an element from an array?
 Answer:
-
+if we don't have the index of that element so we have to go over every element by comparison  and tha array my have a big size
 Describe what a tree data structure is?
 Answer:
-
+The Tree is a recursive data structure containing the set of one or more data nodes where one node is designated as the root
+of the tree while the remaining nodes are called as the children of the root.
+The nodes other than the root node are partitioned into the nonempty sets where each one of them is to be called sub-tree.
 Describe what a graph data structure is?
 Answer:
+A graph G can be defined as an ordered set G(V, E) where V(G) represents the set of vertices and E(G) represents the set of edges which
+are used to connect these vertices. A graph can be seen as a cyclic tree, where the vertices maintain any complex relationship
+among them instead of having parent-child relations.
 
 What is the difference between the HashTable and HashMap?
 Answer:
@@ -65,6 +86,9 @@ Answer:
 
 What are linear and non-linear data Structures?
 Answer:
-
+ In linear data structures, the elements are stored in a non-hierarchical
+ way where each item has the successors and predecessors except the first and last element.
+ non-linear each item or element is connected with two or more other items in a non-linear arrangement.
+ The data elements are not arranged in the sequential structure.
 Outline different sorting algorithms and their time complexities:
 

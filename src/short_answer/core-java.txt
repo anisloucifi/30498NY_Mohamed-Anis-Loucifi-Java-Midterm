@@ -2,31 +2,45 @@
 
 What is a programming language?
 Answer:
+programming language is a computer language that is used by programmers  to communicate with computers. It is a set of instructions written
+in any specific language ( C, C++, Java, Python) to perform a specific task.
 
 What is a JDK composed of? Define each components?
 Answer:
-
+jdk is composed of
+ 1-JRE The Java Runtime Environment is a set of software tools which are used for developing Java applications.
+ It is used to provide the runtime environment
+ 2-JVM Java Virtual Machine is an abstract machine. It is called a virtual machine because it doesn't physically exist.
+  It is a specification that provides a runtime environment in which Java bytecode can be executed.
+Development tool suite of file and application that can be necessary for the developing process
 What is an IDE?
 Answer:
+A Java IDE is an integrated development environment for programming in Java; many also provide functionality for other languages,
 
 What are some of the most popular Java IDEs available in the market?
 Answer:
+eclipce, netBeans,intellj idea.
 
 Explain the entire java life cycle.
 Answer:
 
 What is a class?
 Answer:
+all java code are defined in a Class it has variables and methods
 
 What is an object?
 Answer:
+the Object is the real-time entity having some state and behavior.
+In Java, Object is an instance of the class having the instance variables as the state of the object and the methods as the behavior of the object.
+ The object of a class can be created by using the new keyword.
 
 What is the entry point of a Java project?
 Answer:
 
 Why is the main() method static?
 Answer:
-
+Because the object is not required to call the static method. If we make the main method non-static,
+JVM will have to create its object first and then call main() method which will lead to the extra memory allocation
 Which class is the superclass of all classes?
 Answer:
 
@@ -35,7 +49,10 @@ Answer:
 
 What is the difference between an Interface and Abstract class?
 Answer:
-
+abstract classes have a default constructor and it is called as a  subclass in instantiated
+interface doesn't have any constructor and couldn't be instantiated
+abstract class contains instance variables
+interface contains only constants
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
 Answer:
 
@@ -56,13 +73,16 @@ Answer:
 
 What is method overloading? List all of the different ways to overload.
 Answer:
-
+method overloading happens for different classes or within the same class ,simply when you update parameters or return type with the same method name
+ways to overload : by making different argument types, change the return type.
 Explain exceptions in java and how to handle them.
 Answer:
-
+an exceptions is problem that can occur during the normal flow of execution,a method can throw an exception when something wails at runtime.
+there tow way to handle exception : Using try/catch  or by declaring throws keyword.
 What is static keyword? When and how do we use it?
 Answer:
-
+a static is keyword can be added to a method or a variable and make them belongs to the class rather than the object.
+we can use it by write it when variable declaration or method definition (static variable)(static void/int method)
 What is final keyword? When and how do we use it?
 Answer:
 
@@ -71,15 +91,22 @@ Answer:
 
 What is a constructor?
 Answer:
+The constructor can be defined as the special type of method that is used to initialize the state of an object.
+ It is invoked when the class is instantiated, and the memory is allocated for the object.
+ Every time, an object is created using the new keyword, the default constructor of the class is called.
+ The name of the constructor must be similar to the class name and must have an explicit return type.
 
 Can we have multiple constructors in a class?
 Answer:
+no a class can have only one constructor
 
 If we don't have a constructor declared, what is called during the object creation?
 Answer:
-
+evry class has a constructor by default wish is the same name as the class and it will be used to call during the object creation
 What is "this" keyword in Java? When would we use it?
 Answer:
+this key word is an object it is used to assigne the parameter in a methode if they are the same as declared on scope
+ usuely used when overload the constructor
 
 What is "super" keyword in Java? What are some scenarios we would use it?
 Answer:
@@ -110,6 +137,8 @@ Answer:
 
 How does Java manage its memory?
 Answer:
+is a chunk of memory wich is shared among all threads
+the heap is manage in tow parts young generation wish is reserved for allocation of object and old space wish contains objects that lives long
 
 What is the difference between String, StringBuffer and StringBuilder?
 Answer:
