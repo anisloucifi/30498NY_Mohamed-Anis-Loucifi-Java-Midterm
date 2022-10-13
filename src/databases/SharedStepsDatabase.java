@@ -222,13 +222,10 @@ public class SharedStepsDatabase {
      * @param columnName Name of the column
      * @param list The list to be inserted
      */
-    public void insertList(String tableName, String columnName, List<Object> list) {
+    public void insertList(String tableName, String columnName, ArrayList<String> list) {
         dropTable(tableName);
         boolean isNumericalData = false;
 
-        if (list.get(0) instanceof Integer) {
-            isNumericalData = true;
-        }
         createTableSingleColumn(tableName, columnName, isNumericalData);
 
         try {

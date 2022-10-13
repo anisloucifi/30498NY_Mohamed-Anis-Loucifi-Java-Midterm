@@ -52,11 +52,11 @@ public class UnitTestConnectDB {
 //
         // endregion
 
-        // region InsertString
-//        ssdb.insertString("test_insert_string", "test_string", "Sami loves Aamna");
-//        System.out.println(ssdb.executeQueryReadAllSingleColumn("SELECT * FROM TEST_INSERT_STRING", 2).get(0));
+//         region InsertString
+        ssdb.insertString("test_insert_string", "test_string", "Sami loves Aamna");
+        System.out.println(ssdb.executeQueryReadAllSingleColumn("SELECT * FROM TEST_INSERT_STRING", 2).get(0));
 //
-        // endregion
+//         endregion
 
         // region insertList
 //        List<Object> names = new ArrayList<>();
