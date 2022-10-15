@@ -6,6 +6,7 @@ import java.util.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import databases.SharedStepsDatabase;
 import org.xml.sax.SAXException;
 
 
@@ -74,18 +75,42 @@ public class ProcessStudentInfo {
          contain QTP students
          */
         Map<String, List<Student>> studentMap = new LinkedHashMap<String, List<Student>>();
-        System.out.println("this is the map \n");
-        studentMap.put("selenium",stdlistselin);
-        studentMap.put("qtp",stdlistqtp);
-        System.out.println(studentMap + "\n");
 
-        Iterator<Map.Entry<String , List<Student>>> itrmap = studentMap.entrySet().iterator();
-        while(itrmap.hasNext()){
-
-            System.out.println(itrmap.next());
+        studentMap.put("selenium", stdlistselin);
+        studentMap.put("qtp", stdlistqtp);
+        List<Student> Students = new ArrayList<Student>();
+        Students.addAll(stdlistselin);
+        Students.addAll(stdlistqtp);
+        Iterator<Map.Entry<String, List<Student>>> itrmap = studentMap.entrySet().iterator();
+        while (itrmap.hasNext()) {
+            itrmap.next();
         }
 
-        // Implement the rest below, as per the instructions
+        for (Student s : Students) {
+            System.out.print("Student ID:" + s.getId() + "\t" + "\n");
+            System.out.print("First Name:" + s.getFirstName() + "\t" + "\n");
+            System.out.print("Last Name:" + s.getLastName() + "\t" + "\n");
+            System.out.print("GRADE:" + s.getScore() + "\t" + "\n");
+            System.out.print(" ");
+            System.out.println();
+        }
+        List<String> FirstName = new ArrayList<String>();
+        List<String> LastName = new ArrayList<String>();
+        List<String> grade = new ArrayList<String>();
+        for (Student s : Students) {
+            FirstName.add(s.getFirstName());
+            LastName.add(s.getLastName());
+            grade.add(String.valueOf(s.getScore()));
 
+            SharedStepsDatabase sql = new SharedStepsDatabase();
+            sql.insertList("FirstName_xml", "first_name", (ArrayList<String>) FirstName);
+            sql.insertList("LastName_xml", "last_Name", (ArrayList<String>) LastName);
+            sql.insertList("Grade_xml", "grade", (ArrayList<String>) grade);
+
+
+//
+//        // Implement the rest below, as per the instructions
+
+        }
     }
 }
