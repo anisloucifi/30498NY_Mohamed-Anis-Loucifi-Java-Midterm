@@ -58,12 +58,23 @@ public class SortEfficiency {
 
         System.out.println("Total Execution Time of " + numberArray.length + " numbers in Insertion Sort took: "
                 + insertionSortExecutionTime + " milliseconds");
-
+        ssdb.insertIntegerArray("region_sort", "number", numberArray);
+        String sql = "SELECT * FROM region_sort";
+        List<String> insertRegion = ssdb.executeQueryReadAllSingleColumn(sql, "number");
         // endregion
 
         randomize(numberArray);
 
         // region Bubble Sort
+
+        numberArray = sort.bubbleSort(numberArray);
+        long bubbleSortExecutionTime = sort.executionTime;
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Bubble Sort took: "
+                + bubbleSortExecutionTime + " milliseconds");
+
+        ssdb.insertIntegerArray("region_bubble_sort", "number", numberArray);
+        String sql2 = "SELECT * FROM bubble_sort";
+        List<String> insertBubble = ssdb.executeQueryReadAllSingleColumn(sql2, "number");
 
         // endregion
 
@@ -82,6 +93,7 @@ public class SortEfficiency {
         randomize(numberArray);
 
         // region Heap Sort
+
 
         // endregion
 

@@ -3,12 +3,13 @@ package sorting;
 public class SortingAlgorithms {
 
 
-    /** INSTRUCTIONS
+    /**
+     * INSTRUCTIONS
      * You must implement all of the sorting algorithms below. Feel free to add any helper methods that you may need,
      * but make sure they are private, as to not be accessed outside of this class.
-     *
+     * <p>
      * You must also store the sorted arrays into their own individual database tables (Selection Sort should be stored
-     *  in table `selection_sort`, Insertion Sort should be stored in table `insertion_sort`)
+     * in table `selection_sort`, Insertion Sort should be stored in table `insertion_sort`)
      */
 
     long executionTime = 0;
@@ -43,6 +44,16 @@ public class SortingAlgorithms {
     public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
         // IMPLEMENT HERE
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
+            int j = i - 1;
+            //
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
 
         final long endTime = System.currentTimeMillis();
         this.executionTime = endTime - startTime;
@@ -52,21 +63,36 @@ public class SortingAlgorithms {
 
     public int[] bubbleSort(int[] array) {
         // IMPLEMENT HERE
+        final long startTime = System.currentTimeMillis();
+
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                if (array[j] > array[j + 1]) {
+
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+        final long endTime = System.currentTimeMillis();
+        this.executionTime = endTime - startTime;
 
         return array;
     }
 
     public int[] mergeSort(int[] array) {
         // IMPLEMENT HERE
-
-        return array;
+         return array;
     }
 
     public int[] quickSort(int[] array) {
         // IMPLEMENT HERE
 
+
         return array;
     }
+
 
     public int[] heapSort(int[] array) {
         // IMPLEMENT HERE

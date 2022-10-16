@@ -1,9 +1,8 @@
 package data_structures;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import databases.SharedStepsDatabase;
+
+import java.util.*;
 
 public class UseQueue {
 
@@ -25,6 +24,7 @@ public class UseQueue {
         q.add(4);
         q.add(5);
         q.add(6);
+        //use peek return the head of queue
         int a = q.peek();
         System.out.println(a);
 
@@ -35,8 +35,28 @@ public class UseQueue {
         for (Integer i : q) {
             System.out.println(i);
         }
-
+        Iterator<Integer> itr = q.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
         }
+
+        List l=(List) q;
+        System.out.println(l);
+
+        SharedStepsDatabase sql = new SharedStepsDatabase();
+        try {
+            System.out.println("true");
+            sql.insertList("queue","listQueue", (ArrayList<String>) l);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+
+
+
+    }
     }
 
 
