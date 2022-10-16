@@ -23,7 +23,22 @@ eclipce, netBeans,intellj idea.
 
 Explain the entire java life cycle.
 Answer:
+in Java application development, the Java development life cycle comprises the following phases:
 
+Planning  : project owners and project managers collaborate to define the timeline of the project,
+come up with cost estimates, and determine the resources required for the project.
+
+Requirements Gathering : The second phase of the Java development process is requirements gathering.
+
+Design : this phase, the team works together to create a high-level design for the application.
+This design will guide the implementation process and help ensure that all necessary functionality is included in the final product.
+Implementation :n this phase, the team works together to turn the design into a working code. This involves writing classes, methods, and tests.
+
+Testing : the team works together to test the application to ensure it meets all requirements.
+This includes unit testing, integration testing, and user acceptance testing.
+
+Deployment :In this phase, the team collaborates to deploy the application to a production environment.
+ This includes setting up servers, configuring networking, and more.
 What is a class?
 Answer:
 all java code are defined in a Class it has variables and methods
@@ -36,16 +51,20 @@ In Java, Object is an instance of the class having the instance variables as the
 
 What is the entry point of a Java project?
 Answer:
-
+is the main method main().
 Why is the main() method static?
 Answer:
 Because the object is not required to call the static method. If we make the main method non-static,
 JVM will have to create its object first and then call main() method which will lead to the extra memory allocation
 Which class is the superclass of all classes?
 Answer:
+java.lang.Object is the super class for all classes
 
 What is difference between path and classpath variables?
 Answer:
+The classpath is used for executing the application. This includes all java classes and libraries that are needed to run the java application.
+A Classpath is mandatory.a path is a like a link for any object or component of the program
+the default path is (.) which is used if the java virtual machine can't find a user defined path.
 
 What is the difference between an Interface and Abstract class?
 Answer:
@@ -53,18 +72,23 @@ abstract classes have a default constructor and it is called as a  subclass in i
 interface doesn't have any constructor and couldn't be instantiated
 abstract class contains instance variables
 interface contains only constants
+
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
 Answer:
 
 What is Access Modifier?
 Answer:
+is a keyword added to class or method to specify the access from other classes or package or methods like(public,protected,private)
 
 What is OOP? Define each OOP concept.
 Answer:
+oriented object programing is a way to develop application on java using object.
 
 What is Java Package and which package is imported by default?
 Answer:
-
+A Package can be clarified as a group of related types(classes, interfaces, explanations and specifications )
+giving access shield and name space administration.
+java.lang is a package imported by default
 What is an API? List some API's that you have used so far.
 Answer:
 
@@ -110,30 +134,42 @@ this key word is an object it is used to assigne the parameter in a methode if t
 
 What is "super" keyword in Java? What are some scenarios we would use it?
 Answer:
-
+super key word is a keyword used to import method or object from a super class or a parent class
+you can use it in child class (class extend from a other class) like if you right a constructor and you import
+ instance from constructor in a super class
 What does JVM stand for?
 Answer:
-
+is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed.
 Is JVM platform independent?
 Answer:
-
+yes
 What version of Java are you using?
 Answer:
+version 15.0.1
 
 What does JAR stand for?
 Answer:
+In Java, JAR stands for Java ARchive, whose format is based on the zip format.
+The JAR files format is mainly used to aggregate a collection of files into a single one.
 
 What is the difference between JDK and JVM?
 Answer:
+ JVM it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed.
+ It can also run those programs which are written in other languages and compiled to Java bytecode.
+ JDK is a software development environment which is used to develop Java applications and applets. It physically exists.
+  It contains JRE + development tools.
 
 What is the difference between JVM and JRE?
 Answer:
+JRE It is the implementation of JVM. It physically exists. It contains a set of libraries + other files that JVM uses at runtime.
+JVM JVM it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed.
 
 Explain the difference between compile-time and run-time?
 Answer:
 
 What is heap?
 Answer:
+It is the runtime data area in which objects are allocated.
 
 How does Java manage its memory?
 Answer:
@@ -151,36 +187,51 @@ Answer:
 
 Explain the difference between While and Do..While loops?
 Answer:
-
+in Wile the execution code is wrote after the  condition
+in do Wile loop the execution code is wrote before the  condition
 What is Enum?
 Answer:
-
+ The Enum in Java is a data type which contains a fixed set of constants.It can be used for days of the week
+ Enums are used to create our own data type like classes. The enum data type (also known as Enumerated Data Type)
+ is used to define an enum in Java.
 What is Iterator?
 Answer:
+ Java Iterator is an interface that is practiced in order to iterate over a collection of Java object components entirety one by one.
 
 Which one will take more memory: an int or Integer? Why?
 Answer:
+Integer : because it usuely hold a suite on integer ex in a list or in an array
 
 Why are Strings considered to be immutable in Java?
 Answer:
 
 What is constructor chaining in Java?
 Answer:
+In Java, constructor chaining is a sequence of invoking constructors upon initializing an object.
+ It is used when we want to invoke a number of constructors, one after another by using only an instance.
 
 The difference between Serial and Parallel Garbage Collector?
 Answer:
+difference between serial and parallel garbage collector is that serial garbage collector uses a single thread
+for garbage collection process while the parallel garbage collector uses multiple threads for the garbage collection.
 
 What does JIT stands for?
 Answer:
+JIT stands for Java-In-Time Compiler.
 
 Explain the process of Java garbage collection?
 Answer:
+In Java, garbage collection is the process of managing memory, automatically. It finds the unused objects (that are no longer used by the program) and delete or remove them to free up the memory.
+The garbage collection mechanism uses several GC algorithms. The most popular algorithm that is used is Mark and Sweep.
 
 Can you guarantee the garbage collection process?
 Answer:
+ We cannot force the garbage collector to collect the garbage, it depends on the JVM.
 
 What is the difference between stack and heap in Java?
 Answer:
+The major difference between Stack memory and heap memory is that the stack is used to store the order of method execution and local variables while the heap memory stores the objects and it uses dynamic memory allocation and deallocation. In this section,
+we will discuss the differences between stack and heap in detail.
 
 What is reflection in Java and why is it useful?
 Answer:
